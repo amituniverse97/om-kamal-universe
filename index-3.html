@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OM KAMAL UNIVERSE — the personal space of Amit Gangwar.">
+  <title>OM KAMAL UNIVERSE | Amit Gangwar</title>
+  <style>
+    :root {
+      --ink: #111111;
+      --muted: #666666;
+      --paper: #ffffff;
+      --soft: #f4f4f4;
+      --line: #e8e8e8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 850; letter-spacing: .11em; font-size: .88rem; }
+    .navlinks { display: flex; gap: 26px; color: #444; font-size: .92rem; }
+    .navlinks a:hover { color: #000; text-decoration: underline; text-underline-offset: 5px; }
+    .hero {
+      min-height: 610px; display: grid; align-items: center;
+      padding: 90px 0 100px;
+      background: radial-gradient(circle at 85% 20%, #eeeeee 0, transparent 30%), linear-gradient(135deg, #fff 50%, #f7f7f7 100%);
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: .22em; font-size: .75rem; font-weight: 750; color: var(--muted); }
+    h1 { font-size: clamp(3rem, 8vw, 6.6rem); line-height: .98; letter-spacing: -.07em; margin: 20px 0; max-width: 850px; }
+    h1 span { display: block; color: #777; }
+    .hero p { max-width: 560px; font-size: clamp(1rem, 2vw, 1.2rem); color: #555; margin: 25px 0 32px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 13px 22px; background: #111; color: #fff; border: 1px solid #111;
+      border-radius: 999px; font-weight: 650; transition: .2s ease;
+    }
+    .button:hover { background: #fff; color: #111; transform: translateY(-2px); }
+    section { padding: 92px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+    h2 { font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1; letter-spacing: -.055em; margin: 10px 0 0; }
+    .about-card {
+      display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px;
+      padding: clamp(28px, 5vw, 58px); background: var(--soft); border: 1px solid var(--line); border-radius: 24px;
+    }
+    .monogram {
+      min-height: 260px; display: grid; place-items: center; background: #111; color: #fff;
+      border-radius: 18px; font-size: clamp(4rem, 10vw, 7rem); font-weight: 850; letter-spacing: -.09em;
+    }
+    .about-copy h3 { font-size: 1.65rem; margin: 4px 0 12px; }
+    .about-copy p { color: #555; margin: 0 0 14px; }
+    .tagline { display: inline-block; margin-top: 12px; font-weight: 750; letter-spacing: .02em; }
+    .quote { background: #111; color: #fff; text-align: center; padding: 76px 24px; }
+    .quote p { max-width: 760px; margin: 0 auto; font-size: clamp(1.6rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -.04em; }
+    .quote small { display: block; margin-top: 22px; color: #aaa; letter-spacing: .18em; text-transform: uppercase; }
+    .contact-box { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 34px; border: 1px solid var(--line); border-radius: 20px; }
+    .contact-box p { color: var(--muted); margin: 8px 0 0; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; color: #777; font-size: .86rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    @media (max-width: 700px) {
+      .nav { min-height: 64px; }
+      .navlinks { gap: 14px; font-size: .82rem; }
+      .brand { font-size: .72rem; }
+      .hero { min-height: 560px; padding: 75px 0; }
+      .about-card { grid-template-columns: 1fr; gap: 25px; }
+      .monogram { min-height: 190px; }
+      section { padding: 68px 0; }
+      .section-head { display: block; }
+      .contact-box { display: block; }
+      .contact-box .button { margin-top: 20px; }
+    }
+    @media (max-width: 390px) {
+      .wrap { width: min(100% - 28px, 1100px); }
+      .navlinks { gap: 10px; }
+      .navlinks a { font-size: .76rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">OM KAMAL UNIVERSE</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="eyebrow">A personal space by Amit Gangwar</div>
+        <h1>Think freely.<span>Be original.</span></h1>
+        <p>Welcome to OM KAMAL UNIVERSE — a little corner of the internet to share my identity, ideas and journey.</p>
+        <a class="button" href="#about">Discover my story <span aria-hidden="true">&nbsp;↗</span></a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Get to know me</div>
+            <h2>About Me</h2>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="monogram" aria-label="AG monogram">AG</div>
+          <div class="about-copy">
+            <div class="eyebrow">Hello, I'm</div>
+            <h3>Amit Gangwar</h3>
+            <p>Welcome to my little corner of the internet — OM KAMAL UNIVERSE.</p>
+            <p>I believe in being myself, learning new things and creating my own identity. This is my personal space where you can know more about me and my journey.</p>
+            <span class="tagline">Be Original. Be Unique. Be Yourself.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote">
+      <p>“Your journey is your own. Make it meaningful.”</p>
+      <small>OM KAMAL UNIVERSE</small>
+    </div>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <div class="eyebrow">Stay connected</div>
+            <h2>Let's connect.</h2>
+            <p>Social links can be added here whenever you're ready.</p>
+          </div>
+          <a class="button" href="mailto:hello@example.com?subject=Hello%20Amit">Say hello <span aria-hidden="true">&nbsp;↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> OM KAMAL UNIVERSE</span>
+      <span>Created for Amit Gangwar</span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
